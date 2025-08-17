@@ -1,0 +1,14 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/surpasser-count0615/1?page=7&category=Hash&sortBy=submissions">Surpasser Count</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given an array <strong>arr[]</strong> containing distinct integers, find the <strong>number </strong>of surpassers for each of its elements. </span><span style="font-size: 18px;">An element </span><strong style="font-size: 18px;">y</strong><span style="font-size: 18px;"> is said to be the <strong>surpasser </strong>of element </span><strong style="font-size: 18px;">x</strong><span style="font-size: 18px;"> if it is a greater element on the right of x. ie., if x = arr[i] and y = arr[j], i&lt;j and arr[i] &lt; arr[j].</span></p>
+<p><span style="font-size: 18px;"><strong>Examples:</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>arr[] = [2, 7, 5, 3, 8, 1]<br></span><span style="font-size: 18px;"><strong>Output:</strong> [4, 1, 1, 1, 0, 0]</span>
+<span style="font-size: 18px;"><strong style="font-size: 18px;">Explanation:</strong><span style="font-size: 18px;"><br>For 2, there are 4 greater elements to its right: [7, 5, 3, 8]
+For 7, there is 1 greater element to its right: [8]
+For 5, there is 1 greater element to its right: [8]
+For 3, there is 1 greater element to its right: [8]
+For 8, there is no greater element to its right: [0]
+For 1, there is no greater element to its right: [0]</span></span></pre>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>arr[] = [4, 5, 1]</span>
+<span style="font-size: 18px;"><strong>Output:</strong> [1, 0, 0]<br></span><strong><span style="font-size: 18px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Explanation</span></strong><strong style="font-size: 18px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">:</strong><br><span style="font-size: 18px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">For 4, there is 1 greater element to its right: [5]
+For 5, there is no greater element to its right: [0]
+For 1, there is no greater element to its right: [0]</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ arr.size() ≤ 10<sup>5</sup><br>1 ≤ arr[i] ≤ 10<sup>6</sup></span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Google</code>&nbsp;<code>Yahoo</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Arrays</code>&nbsp;<code>Data Structures</code>&nbsp;<code>Hash</code>&nbsp;<code>Algorithms</code>&nbsp;
