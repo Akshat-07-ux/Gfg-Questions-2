@@ -1,28 +1,38 @@
+/*
+class Node {
+  public:
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int value) {
+        data = value;
+        left = nullptr;
+        right = nullptr;
+    }
+};
+*/
+
 class Solution {
   public:
-    int sum = 0; // running sum of greater values
-    
-    void transformTreeUtil(struct Node* root) {
+    int sum = 0; // running sum of all nodes greater than current
+
+    void transformTree(Node *root) {
         if (!root) return;
-        
-        // Process right subtree first (greater values)
-        transformTreeUtil(root->right);
-        
-        // Save original value
+
+        // Traverse right subtree first (greater values)
+        transformTree(root->right);
+
+        // Store original node value
         int original = root->data;
-        
-        // Replace with sum of greater nodes
+
+        // Replace node’s value with current greater sum
         root->data = sum;
-        
-        // Update running sum
+
+        // Update sum to include the original value
         sum += original;
-        
-        // Process left subtree
-        transformTreeUtil(root->left);
-    }
-    
-    void transformTree(struct Node *root) {
-        sum = 0; // reset before transformation
-        transformTreeUtil(root);
+
+        // Traverse left subtree (smaller values)
+        transformTree(root->left);
     }
 };
