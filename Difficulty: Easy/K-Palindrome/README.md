@@ -1,0 +1,11 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/k-palindrome/1?page=14&category=Strings&sortBy=submissions">K-Palindrome</a></h2><h3>Difficulty Level : Difficulty: Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 20px;"><span style="font-size: 20px;">Given a string <strong>s</strong> containing <strong>n</strong> lowercase alphabets and an integer <strong>k</strong>, a string is considered a "<strong>k-palindrome</strong>" if it can be converted into a palindrome by removing <strong>no more than k characters</strong>. Your task is to determine whether the given string s can be made into a k-palindrome or not.</span></span></p>
+<p><span style="font-size: 18px;"><strong>Example 1:</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input: <br></strong>s = abcdecba<br>k = 1
+<strong>Output: <br></strong>true<strong>
+Explanation: <br></strong>Since k = 1, by removing either 'd' or 'e', the string can become a palindrome. <br>- Hence answer is <strong>true</strong>.</span></pre>
+<p><span style="font-size: 18px;"><strong>Example 2:</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input: <br></strong>s = abcd<br>k = 2
+<strong>Output: <br></strong>false<strong>
+Explanation: <br></strong>Since k = 2, we can remove at most 2 characters. but for given string it is impossible to make it palindrome by removing at most 2 characters.<br>- Hence answer is <strong>false</strong>.</span></pre>
+<p><span style="font-size: 18px;"><strong>Your Task:</strong><br>The task is to complete the function&nbsp;<strong>iskPalindrome() </strong>which takes a string <strong>s </strong>and an integer <strong>k</strong> as input parameters and returns the <strong>true</strong> if s is k-palindrome, else&nbsp;<strong>false</strong>.</span></p>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ n ≤ 1000</span><br><span style="font-size: 18px;">0 ≤ k ≤ n</span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Facebook</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Dynamic Programming</code>&nbsp;<code>Algorithms</code>&nbsp;<code>Strings</code>&nbsp;
