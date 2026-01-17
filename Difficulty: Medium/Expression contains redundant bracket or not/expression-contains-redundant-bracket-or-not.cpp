@@ -1,31 +1,32 @@
 class Solution {
   public:
-    int checkRedundancy(string s) {
+    bool checkRedundancy(string &s) {
         stack<char> st;
 
         for (char ch : s) {
-            if (ch == ')') {
-                bool operatorFound = false;
+            // Push everything except closing bracket
+            if (ch != ')') {
+                st.push(ch);
+            } else {
+                bool hasOperator = false;
 
-                // Pop elements till '(' and check for operator in between
+                // Check contents inside the brackets
                 while (!st.empty() && st.top() != '(') {
                     char top = st.top();
-                    st.pop();
                     if (top == '+' || top == '-' || top == '*' || top == '/') {
-                        operatorFound = true;
+                        hasOperator = true;
                     }
+                    st.pop();
                 }
 
-                if (!st.empty()) st.pop(); // pop the opening '('
+                // Pop the opening '('
+                if (!st.empty()) st.pop();
 
-                if (!operatorFound) {
-                    return 1; // redundant parenthesis found
-                }
-            } else {
-                st.push(ch);
+                // No operator means redundant brackets
+                if (!hasOperator) return true;
             }
         }
 
-        return 0; // no redundancy found
+        return false;
     }
 };
