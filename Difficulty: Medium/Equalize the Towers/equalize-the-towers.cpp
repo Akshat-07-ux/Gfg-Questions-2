@@ -1,38 +1,41 @@
 class Solution {
- public:
-    int minCost(vector<int>& heights, vector<int>& cost) {
-        int n = heights.size();
-        vector<pair<int, int>> towers(n);
-        for (int i = 0; i < n; ++i) {
-            towers[i] = {heights[i], cost[i]};
+public:
+    // Helper function to calculate total cost for a specific target height
+    long long calculateCost(const vector<int>& heights, const vector<int>& cost, int target) {
+        long long total = 0;
+        for (int i = 0; i < heights.size(); i++) {
+            total += (long long)abs(heights[i] - target) * cost[i];
+        }
+        return total;
+    }
+
+    long long minCost(vector<int>& heights, vector<int>& cost) {
+        int low = 1, high = 10000; // Based on constraints 1 <= heights[i] <= 10^4
+        
+        // Find actual min and max to tighten the search space
+        for(int h : heights) {
+            low = min(low, h);
+            high = max(high, h);
         }
 
-        // Sort by height
-        sort(towers.begin(), towers.end());
+        long long ans = calculateCost(heights, cost, low);
 
-        // Calculate total cost
-        long long totalCost = 0;
-        for (int i = 0; i < n; ++i) {
-            totalCost += towers[i].second;
-        }
+        while (low <= high) {
+            int mid1 = low + (high - low) / 3;
+            int mid2 = high - (high - low) / 3;
 
-        // Find weighted median
-        long long cumulativeCost = 0;
-        int targetHeight = 0;
-        for (int i = 0; i < n; ++i) {
-            cumulativeCost += towers[i].second;
-            if (cumulativeCost >= (totalCost + 1) / 2) {
-                targetHeight = towers[i].first;
-                break;
+            long long cost1 = calculateCost(heights, cost, mid1);
+            long long cost2 = calculateCost(heights, cost, mid2);
+
+            ans = min({ans, cost1, cost2});
+
+            if (cost1 < cost2) {
+                high = mid2 - 1;
+            } else {
+                low = mid1 + 1;
             }
         }
-
-        // Compute final cost using the chosen height
-        long long answer = 0;
-        for (int i = 0; i < n; ++i) {
-            answer += 1LL * abs(towers[i].first - targetHeight) * towers[i].second;
-        }
-
-        return answer;
+        
+        return ans;
     }
 };
