@@ -1,38 +1,41 @@
-#include <bits/stdc++.h>
+#include <string>
+#include <vector>
+
 using namespace std;
 
 class Solution {
   public:
-    const int MOD = 1000003;
+    // Helper function to precompute factorials
+    long long factorial(int n) {
+        if (n <= 1) return 1;
+        long long res = 1;
+        for (int i = 2; i <= n; i++) res *= i;
+        return res;
+    }
 
-    int rank(string s) {
-        int n = s.size();
-        
-        // Step 1: Check for duplicate characters
-        vector<int> freq(256, 0);
-        for (char c : s) {
-            if (++freq[c] > 1) return 0;
-        }
+    long long findRank(string str) {
+        int n = str.length();
+        long long rank = 1; // Start at 1
+        long long fact = factorial(n);
 
-        // Step 2: Precompute factorials modulo MOD
-        vector<long long> fact(n + 1, 1);
-        for (int i = 1; i <= n; i++)
-            fact[i] = (fact[i - 1] * i) % MOD;
-
-        // Step 3: Calculate rank
-        long long rank = 1;
         for (int i = 0; i < n; i++) {
-            int smaller = 0;
+            // Update factorial for the remaining (n - 1 - i) positions
+            fact /= (n - i);
 
-            // Count chars smaller than s[i] to its right
+            // Count how many characters smaller than str[i] 
+            // are present to the right of index i
+            int countSmaller = 0;
             for (int j = i + 1; j < n; j++) {
-                if (s[j] < s[i])
-                    smaller++;
+                if (str[j] < str[i]) {
+                    countSmaller++;
+                }
             }
 
-            rank = (rank + smaller * fact[n - i - 1]) % MOD;
+            // Those countSmaller characters could have been at index i instead,
+            // each creating (n - 1 - i)! permutations that come before str
+            rank += (long long)countSmaller * fact;
         }
 
-        return (int)rank;
+        return rank;
     }
 };
