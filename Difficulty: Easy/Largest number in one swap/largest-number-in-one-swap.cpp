@@ -1,25 +1,25 @@
 class Solution {
   public:
     string largestSwap(string &s) {
-        int n = s.size();
-        // record the last occurrence of each digit
+        int n = s.length();
+        // Array to store the last seen index of each digit 0-9
         vector<int> last(10, -1);
-        
         for (int i = 0; i < n; i++) {
             last[s[i] - '0'] = i;
         }
-        
-        // traverse from left to right
+
+        // Traverse the string from left to right
         for (int i = 0; i < n; i++) {
-            // try to find a larger digit to swap with (from 9 down to current+1)
-            for (int d = 9; d > s[i] - '0'; d--) {
-                if (last[d] > i) { // found a candidate later in string
+            // Check digits 9 down to (current digit + 1)
+            for (int d = 9; d > (s[i] - '0'); d--) {
+                // If a larger digit exists later in the string
+                if (last[d] > i) {
                     swap(s[i], s[last[d]]);
-                    return s; // only one swap allowed
+                    return s; // Return after the first (and best) swap
                 }
             }
         }
-        
-        return s; // no swap possible, already max
+
+        return s; // If no beneficial swap is found
     }
 };
