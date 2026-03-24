@@ -1,41 +1,43 @@
 class Solution {
-  public:
+public:
     bool canFinish(int n, vector<vector<int>>& prerequisites) {
-        vector<vector<int>> graph(n);
-        vector<int> indegree(n, 0);
-
-        // Build graph and indegree array
-        for (auto &p : prerequisites) {
-            int x = p[0]; // course to take
-            int y = p[1]; // prerequisite
-            graph[y].push_back(x);
-            indegree[x]++;
+        // 1. Create adjacency list and in-degree array
+        vector<vector<int>> adj(n);
+        vector<int> inDegree(n, 0);
+        
+        for (auto& pre : prerequisites) {
+            int course = pre[0];
+            int dependency = pre[1];
+            // The problem says [x, y] means y must be taken before x
+            // So the edge is dependency -> course
+            adj[dependency].push_back(course);
+            inDegree[course]++;
         }
 
+        // 2. Add all nodes with 0 in-degree to the queue
         queue<int> q;
-
-        // Push courses with no prerequisites
         for (int i = 0; i < n; i++) {
-            if (indegree[i] == 0)
+            if (inDegree[i] == 0) {
                 q.push(i);
-        }
-
-        int completed = 0;
-
-        // BFS Topological Sort
-        while (!q.empty()) {
-            int course = q.front();
-            q.pop();
-            completed++;
-
-            for (int next : graph[course]) {
-                indegree[next]--;
-                if (indegree[next] == 0)
-                    q.push(next);
             }
         }
 
-        // If all courses are completed, return true
-        return completed == n;
+        // 3. Process the queue
+        int count = 0;
+        while (!q.empty()) {
+            int curr = q.front();
+            q.pop();
+            count++;
+
+            for (int neighbor : adj[curr]) {
+                inDegree[neighbor]--;
+                if (inDegree[neighbor] == 0) {
+                    q.push(neighbor);
+                }
+            }
+        }
+
+        // 4. If we processed all nodes, there is no cycle
+        return count == n;
     }
 };
