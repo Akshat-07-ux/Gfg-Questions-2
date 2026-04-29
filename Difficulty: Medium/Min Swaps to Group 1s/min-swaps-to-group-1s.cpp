@@ -2,37 +2,37 @@ class Solution {
   public:
     int minSwaps(vector<int>& arr) {
         int n = arr.size();
-        int K = 0;
+        int totalOnes = 0;
 
-        // Step 1: Count total number of 1s
+        // Step 1: Count total number of 1s in the array
         for (int x : arr) {
-            if (x == 1) K++;
+            if (x == 1) totalOnes++;
         }
 
-        // Step 2: Handle edge case where no 1s are present
-        if (K == 0) return -1;
+        // Step 2: Edge case - no 1s present
+        if (totalOnes == 0) return -1;
 
-        // Step 3: Use sliding window to find the max number of 1s in a window of size K
-        int current_ones = 0;
-        int max_ones = 0;
+        // Step 3: Sliding window of size 'totalOnes'
+        int currentOnes = 0;
+        int maxOnesInWindow = 0;
 
-        // Initialize the first window
-        for (int i = 0; i < K; i++) {
-            if (arr[i] == 1) current_ones++;
+        // Initial window
+        for (int i = 0; i < totalOnes; i++) {
+            if (arr[i] == 1) currentOnes++;
         }
-        max_ones = current_ones;
+        maxOnesInWindow = currentOnes;
 
-        // Slide the window across the array
-        for (int i = K; i < n; i++) {
+        // Slide the window across the rest of the array
+        for (int i = totalOnes; i < n; i++) {
             // Add the new element entering the window
-            if (arr[i] == 1) current_ones++;
-            // Remove the element leaving the window
-            if (arr[i - K] == 1) current_ones--;
+            if (arr[i] == 1) currentOnes++;
+            // Remove the element that is no longer in the window
+            if (arr[i - totalOnes] == 1) currentOnes--;
 
-            max_ones = max(max_ones, current_ones);
+            maxOnesInWindow = max(maxOnesInWindow, currentOnes);
         }
 
-        // Step 4: Minimum swaps = total 1s - max 1s found in any window
-        return K - max_ones;
+        // Step 4: Minimum swaps = total 1s - maximum 1s already together
+        return totalOnes - maxOnesInWindow;
     }
 };
