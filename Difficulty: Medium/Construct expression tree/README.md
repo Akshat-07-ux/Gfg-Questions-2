@@ -1,0 +1,15 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/construct-an-expression-tree/1?page=9&category=Tree&sortBy=submissions">Construct expression tree</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p data-start="86" data-end="191">You are given a postfix expression represented as a string. In this expression, each character is either:</p>
+<ul data-start="193" data-end="279">
+<li data-start="193" data-end="238">
+<p data-start="195" data-end="238">An operand (a single alphabet letter), or</p>
+</li>
+<li data-start="239" data-end="279">
+<p data-start="241" data-end="279">An operator (<code data-start="254" data-end="257">+</code>, <code data-start="259" data-end="262">-</code>, <code data-start="264" data-end="267">*</code>, <code data-start="269" data-end="272">/</code>, <code data-start="274" data-end="277">^</code>).</p>
+</li>
+</ul>
+<p data-start="281" data-end="492">Your task is to build an <strong data-start="306" data-end="325">expression tree</strong> from the given postfix expression.</p>
+<p>The driver code will use the returned root to print the corresponding <strong data-start="564" data-end="584">infix expression</strong>.</p>
+<p><strong style="font-size: 14pt;">Examples:</strong></p>
+<pre><span style="font-size: 14pt;"><span style="font-size: 14pt;"><strong style="font-size: 14pt;">Input: </strong>postfix = "wlrb+-*"<strong style="font-size: 14pt;"><br></strong></span></span><span style="font-size: 14pt;"><strong style="font-size: 14pt;">Output: </strong>w * l - r + b<span style="font-size: 14pt;"><br></span><strong style="font-size: 14pt;">Explanation:</strong><span style="font-size: 14pt;"> The expression tree of the given postfix "wlrb+-*" is: <br>                    *<br>                  /   \<br>                 w    -<br>                     /   \<br>                    l     +<br>                        /   \<br>                       r     b</span></span></pre>
+<pre><span style="font-size: 14pt;"><span style="font-size: 14pt;"><strong style="font-size: 14pt;">Input: </strong>postfix = "ab+ef*g*-"<strong style="font-size: 14pt;"><br></strong></span></span><span style="font-size: 14pt;"><strong style="font-size: 14pt;">Output:</strong><span style="font-size: 14pt;"> a + b - e * f * g<br></span><strong style="font-size: 14pt;">Explanation:</strong><span style="font-size: 14pt;"> The expression tree of the given postfix "ab+ef*g*-" is: <br>                   -<br>                 /   \<br>               +     *<br>              /  \   /  \<br>             a   b  *   g<br>                   / \<br>                  e   f</span></span></pre>
+<p><span style="font-size: 14pt;"><strong>Constraints:<br></strong></span><span style="font-size: 18.6667px;">1 ≤ postfix.size() ≤ 40<br></span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Tree</code>&nbsp;<code>Data Structures</code>&nbsp;
