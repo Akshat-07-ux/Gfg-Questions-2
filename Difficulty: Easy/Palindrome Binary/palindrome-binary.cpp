@@ -1,33 +1,25 @@
-#include <vector>
-using namespace std;
-
 class Solution {
   public:
-    int isPallindrome(long long int N) {
-        // Edge case: although constraints start at 1, 
-        // 0 is technically a palindrome in binary.
-        if (N == 0) return 1;
+    bool isBinaryPalindrome(int n) {
+        // We need to reverse the bits of n.
+        // reversedN will store the bits of n in reverse order.
+        unsigned int reversedN = 0;
+        int temp = n;
 
-        vector<int> bits;
-        
-        // Extract all bits of N
-        while (N > 0) {
-            bits.push_back(N & 1); // Get the last bit
-            N = N >> 1;            // Right shift N by 1
-        }
-        
-        // Check if the vector 'bits' is a palindrome
-        int left = 0;
-        int right = bits.size() - 1;
-        
-        while (left < right) {
-            if (bits[left] != bits[right]) {
-                return 0; // Not a palindrome
+        while (temp > 0) {
+            // Shift reversedN to the left to make room for the next bit
+            reversedN <<= 1;
+            
+            // If the current LSB of temp is 1, add it to reversedN
+            if (temp & 1) {
+                reversedN |= 1;
             }
-            left++;
-            right--;
+            
+            // Shift temp to the right to process the next bit
+            temp >>= 1;
         }
-        
-        return 1; // Is a palindrome
+
+        // If the reversed binary sequence equals the original, it's a palindrome
+        return reversedN == n;
     }
 };
