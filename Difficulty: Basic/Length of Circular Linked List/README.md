@@ -1,0 +1,7 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/length-of-circular-linked-list/1?page=6&category=Linked%20List&sortBy=submissions">Length of Circular Linked List</a></h2><h3>Difficulty Level : Difficulty: Basic</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18px;">Given a circular linked list of size<strong> n</strong>, find the <strong>length </strong>of the list (total number of nodes). <br><strong>Note:</strong> The tail of the circular linked list is connected to head.</span></p>
+<p><span style="font-size: 18px;"><strong>Examples:</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input:</strong><br><img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/927981/Web/Other/blobid0_1778232378.png" width="546" height="90"> 
+<strong>Output: </strong>5</span>
+</pre>
+<pre><span style="font-size: 18px;"><strong>Input: <br><img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/927981/Web/Other/blobid1_1778232418.png" width="628" height="88"><br></strong><strong>Output: </strong>6</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1&nbsp;</span>≤<span style="font-size: 18px;"> nodes </span>≤<span style="font-size: 18px;"> 10<sup>3</sup></span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Linked List</code>&nbsp;<code>Data Structures</code>&nbsp;
