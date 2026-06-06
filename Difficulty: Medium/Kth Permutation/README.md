@@ -1,0 +1,10 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/find-kth-permutation-0932/1?page=2&category=Backtracking&sortBy=submissions">Kth Permutation</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18px;">Given two integers <strong>n</strong> and <strong>k</strong>, find the <strong>k-th</strong> permutation sequence of the first n natural numbers arranged in lexicographical order. Return the answer as a string.</span></p>
+<p><span style="font-size: 18px;"><strong>Examples :</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>n =<strong> </strong>4, k = 3</span>
+<span style="font-size: 18px;"><strong>Output: </strong>1324</span>
+<span style="font-size: 18px;"><strong>Explanation:</strong></span><span style="font-size: 18px;">The permutations in lexicographical order are 1234, 1243, 1324, ..., so the 3rd permutation is 1324.</span>
+</pre>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>n = 3, k = 5</span>
+<span style="font-size: 18px;"><strong>Output: </strong>312</span>
+<span style="font-size: 18px;"><strong>Explanation: </strong>T</span><span style="font-size: 18px;">he permutations in lexicographical order are 123, 132, 213, 231, 312, 321, so the 5th permutation is 312.</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1&nbsp;<span style="color: #273239; font-family: Nunito; font-size: 17px; background-color: #ffffff;">≤</span>&nbsp;n&nbsp;<span style="color: #273239; font-family: Nunito; font-size: 17px; background-color: #ffffff;">≤</span>&nbsp;9<br>1&nbsp;<span style="color: #273239; font-family: Nunito; font-size: 17px; background-color: #ffffff;">≤</span>&nbsp;k&nbsp;<span style="color: #273239; font-family: Nunito; font-size: 17px; background-color: #ffffff;">≤</span>&nbsp;n!</span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Backtracking</code>&nbsp;<code>Algorithms</code>&nbsp;
