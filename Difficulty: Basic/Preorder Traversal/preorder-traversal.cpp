@@ -20,13 +20,13 @@ class Solution {
             return;
         }
         
-        // 1. Visit Root
+       
         result.push_back(curr->data);
         
-        // 2. Traverse Left Subtree
+        
         traverse(curr->left, result);
         
-        // 3. Traverse Right Subtree
+        
         traverse(curr->right, result);
     }
 
