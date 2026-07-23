@@ -1,0 +1,9 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/race-in-fooland4522/1?page=9&category=Sorting&sortBy=submissions">Count Uncovered Positions</a></h2><h3>Difficulty Level : Difficulty: Easy</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18.6667px;">Given an integer <strong>n</strong> representing positions numbered from 1 to n, and a list of inclusive intervals <strong>ranges[][] </strong>of size<strong> m</strong>, where each interval <strong>range[i]</strong> represents <strong>[start, end]</strong> covers all positions from start to end, find the number of positions that are not covered by any interval. </span><span style="font-size: 18.6667px;">The intervals may overlap.</span></p>
+<p><span style="font-size: 14pt;"><strong>Examples:</strong></span></p>
+<pre><span style="font-size: 14pt;"><span style="font-size: 18.6667px;"><strong>Input:</strong> n = 20, ranges[][] = [[1, 3], [5, 8], [8, 13], [14, 15], [9, 12]]
+<strong>Output:</strong> 6
+<strong>Explanation:</strong> The covered positions are 1 to 3 and 5 to 15. Hence, the uncovered positions are 4 and 16 to 20, giving a total of 6 uncovered positions.</span></span></pre>
+<pre><span style="font-size: 18.6667px;"><strong>Input:</strong> n = 10, ranges[][] = [[1, 10], [3, 6]]
+<strong>Output:</strong> 0
+<strong>Explanation:</strong> The interval [1, 10] covers every position from 1 to 10. Therefore, no position remains uncovered.</span></pre>
+<p><span style="font-size: 14pt;"><strong>Constraints:<br></strong></span><span style="font-size: 18.6667px;">1 ≤ n ≤ 10<sup>6</sup><br></span><span style="font-size: 18.6667px;">0 ≤ m ≤ 10<sup>5</sup><br></span><span style="font-size: 18.6667px;">1 ≤ ranges[i][0] ≤ ranges[i][1] ≤ n</span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Arrays</code>&nbsp;<code>Sorting</code>&nbsp;<code>STL</code>&nbsp;
