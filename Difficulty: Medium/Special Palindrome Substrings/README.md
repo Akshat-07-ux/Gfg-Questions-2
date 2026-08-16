@@ -1,0 +1,13 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/special-palindrome-substrings--170647/1?page=8&category=Strings&sortBy=submissions">Special Palindrome Substrings</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18px;">Given two strings s1 and s2, convert s1 into a palindrome such that s2 appears as a substring of s1. </span></p>
+<p><span style="font-size: 18px;">In one operation, you can replace any character of s1 with any other character. Return the <strong>minimum </strong>number of operations required to achieve this.</span></p>
+<p><span style="font-size: 18px;"> If it is not possible to make s1 both a palindrome and contain s2 as a substring, then return -1.</span></p>
+<p><span style="font-size: 18px;"><span style="font-family: Arial;"><span style="color: #000000;"><strong>Examples:</strong></span></span></span></p>
+<pre><span style="font-family: Arial;"><span style="font-size: 18px;"><strong>Input:</strong> s1 = "abaa", s2 = "bb"
+<strong>Output:</strong> 1
+<strong>Explanation:</strong> We can replace s1[2]='a' with 'b'. So the new s1 will be like "abba", having s2 as a substring. So answer is 1.</span></span></pre>
+<pre><span style="font-size: 18px;"><span style="font-family: Arial;"><span style="color: #000000;"><strong>Input: </strong></span></span></span><span style="font-size: 13.5pt;"><span style="font-family: Arial;"><span style="color: #000000;">s1 = "abbd", s2 = "mr"</span></span></span><span style="font-size: 18px;"><span style="font-family: Arial;"><span style="color: #000000;">
+<strong>Output:</strong> 4
+<strong>Explanation:</strong>
+</span></span></span><span style="font-size: 13.5pt;"><span style="font-family: Arial;"><span style="color: #000000;">1st: s1 = "mrbd" --&gt; 2 operations (this is the minimum operation to make s2 a substring of s1) 
+2nd: s1= "mrrm" --&gt; 2 operations (this is the minimum operation to make s1 palindrome)<br></span></span></span><span style="font-size: 14pt;">So answer for this test case is 4.</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ |s2|&nbsp;≤ |s1| ≤&nbsp; 1000</span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>MakeMyTrip</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Strings</code>&nbsp;
