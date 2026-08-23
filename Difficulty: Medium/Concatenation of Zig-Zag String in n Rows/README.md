@@ -1,0 +1,10 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/concatenation-of-zig-zag-string-in-n-rows0308/1">Concatenation of Zig-Zag String in n Rows</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18px;">Given a string <strong>s </strong>and an integer<strong> n</strong> representing the number of rows, write the string in a row-wise<strong> Zig-Zag</strong> pattern with n rows. Return the string formed by concatenating the characters of all rows from top to bottom.</span></p>
+<p><span style="font-size: 18px;"><strong>Examples :</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input:</strong> s = "GEEKSFORGEEKS", n = 3
+<strong>Output:</strong> "GSGSEKFREKEOE"
+<strong>Explanation:</strong> Let us write input string in Zig-Zag fashion in 3 rows.<br> <img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/929833/Web/Other/blobid0_1781777595.webp" width="456" height="111"> <br>Now concatenate all three rows and ignore spaces in every row. We get "GSGSEKFREKEOE"</span></pre>
+<pre><span style="font-size: 18px;"><strong>Input</strong>: s = "ABCDEFGH", n = 2
+<strong>Output:</strong> "ACEGBDFH"
+<strong>Explanation:</strong> Let us write input string in Zig-Zag fashion in 2 rows.<br> <img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/929833/Web/Other/blobid1_1781777658.webp" width="288" height="80">
+Now concatenate the two rows and ignore spaces in every row. We get "ACEGBDFH"</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:<br></strong></span><span style="font-size: 18px;">1 ≤ |s| ≤ 10<sup>5<br></sup>1 ≤ n ≤ </span><span style="font-size: 18px;">|s|</span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>PayPal</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Strings</code>&nbsp;
