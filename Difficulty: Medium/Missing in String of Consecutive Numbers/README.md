@@ -1,0 +1,13 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/find-the-missing-no-in-string/1">Missing in String of Consecutive Numbers</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 20px;">Given a numeric string <strong>s</strong> formed by concatenating consecutive positive integers without any separator, exactly one number is missing from the sequence. The numbers increase by 1, except for the missing number. Return the missing number. </span></p>
+<ul>
+<li><span style="font-size: 20px;">The first number in the sequence can have 1 to 6 digits</span></li>
+<li><span style="font-size: 20px;">If the string does not represent a valid sequence, return -1.</span></li>
+<li><span style="font-size: 20px;">Leading 0s are not considered in forming a number. A 0 is considered as an individual number.</span></li>
+<li><span style="font-size: 20px;">The last number cannot be considered as missing. For example, the sequence "123" is considered invalid and -1 is output.</span></li>
+</ul>
+<p><span style="font-size: 20px;"><strong>Examples:</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input:</strong> </span><span style="font-size: 18px;">s = "</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 14pt; white-space: normal;">9899100102"</span>
+<span style="font-size: 18px;"><strong>Output: </strong>101<strong><br></strong></span><span style="font-size: 18px;"><strong>Explanation: </strong></span><span style="font-size: 18px;">The sequence is 98, 99, 100, 102. The missing number is 101.</span></pre>
+<pre><span style="font-size: 18px;"><strong>Input:</strong> s = "</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 14pt; white-space: normal;">1112141519"</span>
+<span style="font-size: 18px;"><strong>Output: </strong>-1<strong><br></strong></span><span style="font-size: 18px;"><strong>Explanation: </strong></span><span style="font-size: 18px;">The string cannot be formed by concatenating consecutive integers with exactly one missing number.</span></pre>
+<p><strong style="font-size: 20px;">Constraints:</strong><br style="font-size: 20px;"><span style="font-size: 20px;">1 ≤ |s| ≤ 100</span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Intuit</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Strings</code>&nbsp;
